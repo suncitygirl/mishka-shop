@@ -1,0 +1,19 @@
+{
+  "name": "mishka-shop",
+  "version": "1.0.0",
+  "description": "\"Training project designed by HTMLAcademy\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suncitygirl/mishka-shop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suncitygirl/mishka-shop/issues"
+  },
+  "homepage": "https://github.com/suncitygirl/mishka-shop#readme"
+}
