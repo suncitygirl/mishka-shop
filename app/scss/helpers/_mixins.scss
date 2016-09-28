@@ -1,0 +1,27 @@
+@mixin clearfix {
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 60em) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 40em) {
+    @content;
+  }
+}
+
+@mixin desktop{
+  @media (max-width: 30em) {
+    @content;
+  }
+}
