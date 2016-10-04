@@ -3,6 +3,11 @@
 const gulp = require('gulp');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
+var runSequence = require('run-sequence');
+// var autoprefixer = require('gulp-autoprefixer');
+// var sourcemaps = require('gulp-sourcemaps');
+// var sprity = require('sprity');
+// var svgSprite = require('gulp-svg-sprite');
 // var useref = require('gulp-useref');
 // var uglify = require('gulp-uglify');
 // var gulpIf = require('gulp-if');
@@ -10,11 +15,7 @@ var browserSync = require('browser-sync').create();
 // var imagemin = require('gulp-imagemin');
 // var cache = require('gulp-cache');
 // var del = require('del');
-var runSequence = require('run-sequence');
-// var autoprefixer = require('gulp-autoprefixer');
-// var sourcemaps = require('gulp-sourcemaps');
-// var sprity = require('sprity');
-// var svgSprite = require('gulp-svg-sprite');
+
 var config = {
     "mode": {
         css: { // Create a «css» sprite
@@ -136,8 +137,27 @@ gulp.task('sprites', function() {
 });
 
 
-gulp.task('svg-sprites', function() {
-    return gulp.src('sprite/*.svg')
+gulp.task('svgSpriteBuild', function() {
+    return gulp.src('app/assets/sprite/*.svg')
+        // minify svg
+        .pipe($.svgmin({
+            js2svg: {
+                pretty: true
+            }
+        }))
+        // remove all fill and style declarations in out shapes
+        .pipe($.cheerio({
+            run: function($) {
+                $('[fill]').removeAttr('fill');
+                $('[style]').removeAttr('style');
+            },
+            parserOptions: {
+                xmlMode: true
+            }
+        }))
+        // cheerio plugin create unnecessary string '>', so replace it.
+        .pipe($.replace('&gt;', '>'))
+        // build svg sprite
         .pipe($.svgSprite(config))
         .pipe(gulp.dest('app/img'))
 });
