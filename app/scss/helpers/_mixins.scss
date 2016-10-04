@@ -9,19 +9,24 @@
 }
 
 @mixin mobile {
-  @media (max-width: 60em) {
+  @media (max-width: $min-tablet-width) {
     @content;
   }
 }
 
 @mixin tablet {
-  @media (max-width: 40em) {
+  @media (min-width: $min-tablet-width) {
     @content;
   }
 }
 
 @mixin desktop{
-  @media (max-width: 30em) {
+  @media (min-width: $min-desktop-width) {
     @content;
   }
+}
+
+svg {
+  max-width: 100%;
+  max-height: 100%;
 }

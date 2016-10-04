@@ -2,7 +2,8 @@ $white: #fff;
 $black: #000;
 $aquamarine: #63d1bb;
 $dark-aquamarine: #56c3b2;
-$gray: #f1f1f1;
+$light-gray: #f1f1f1;
+$gray: #d3d2d2;
 $dark-gray: #444;
 
 $html-size-base: 10px;
@@ -13,3 +14,7 @@ $font-size--bg: 2.4rem;
 $font-size--lg: 5rem;
 
 $font-family-base: Verdana, Geneva, sans-serif;
+
+$min-mobile-width: 320px;
+$min-tablet-width: 760px;
+$min-desktop-width: 1150px;

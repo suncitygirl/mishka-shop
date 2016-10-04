@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"blocks/main-nav.css","sourceRoot":"/source/","sourcesContent":[]}
+{"version":3,"sources":["main-nav.css"],"names":[],"mappings":"AAAA;EACE,eAAe;EACf,YAAY;EACZ,aAAa,EAAE","file":"blocks/main-nav.css","sourcesContent":[".logo-mobile {\n  display: block;\n  width: 86px;\n  height: 35px; }\n"],"sourceRoot":"/source/"}

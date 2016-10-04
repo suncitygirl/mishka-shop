@@ -1,12 +1,32 @@
 @import "normalize";
 @import "helpers/mixins";
 @import "helpers/variables";
+@import "helpers/partial-reset";
+@import "blocks/main-nav";
+@import "blocks/intro";
+@import "blocks/featuring";
+@import "blocks/about";
 
-html, body {
+html {
   font-family: $font-family-base;
   font-size: $html-size-base;
 }
 
-a {
-  text-decoration: none;
+body {
+  font-size: $font-size;
+  min-width: 320px;
+}
+
+.wrapper {
+  margin: 0 (30px/$min-mobile-width * 100%);
+  @include tablet {
+    margin: 0 (50px/$min-tablet-width * 100%);
+  };
+  @include desktop {
+    margin: 0 (50px/$min-desktop-width * 100%);
+  };
+}
+
+* {
+  box-sizing: border-box;
 }

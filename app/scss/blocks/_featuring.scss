@@ -1,0 +1,144 @@
+.featuring {
+    position: relative;
+    @include desktop {
+        padding-left: 175px/$min-desktop-width * 100%;
+    };
+    &__name {
+        margin-top: 30px;
+        font-size: $font-size--bg;
+        @include tablet {
+            margin-top: 40px;
+            margin-bottom: 35px;
+            font-size: 40px;
+            line-height: 50px;
+        };
+        @include desktop {
+            margin-top: 90px;
+            font-size: $font-size--lg;
+            line-height: 57px;
+        };
+    }
+    &__heading {
+        font-size: $font-size;
+        line-height: 1;
+        text-transform: uppercase;
+        color: $aquamarine;
+        font-weight: lighter;
+        @include tablet {
+            position: absolute;
+            top: 0;
+            right: 50px/$min-tablet-width * 100%;
+            width: 80px;
+            text-align: center;
+        };
+        @include desktop {
+            left: ((50px + 48px)/$min-desktop-width * 100%);
+            text-align: center;
+            font-size: $font-size;
+        };
+    }
+    &__description {
+        font-size: $font-size-sm;
+        line-height: 24px;
+        @include tablet {
+            float: left;
+            width: 50%;
+            margin-bottom: 40px;
+        };
+        @include desktop {
+            width: 80%;
+            margin-bottom: 50px;
+            padding-right: 50%;
+            font-size: $font-size;
+            line-height: 30px;
+        };
+    }
+    &__pic {
+        @include tablet {
+            position: absolute;
+            top: 105px;
+            right: 50px/$min-tablet-width * 100%;
+        }
+    }
+    &__info-table {
+        margin-bottom: 30px;
+        @include tablet {
+            width: 51%;
+            margin-bottom: 20px;
+        };
+        @include desktop {
+            width: 30%;
+            margin-bottom: 75px;
+            font-size: 15px;
+            line-height: 20px;
+        };
+    }
+    &__price {
+        display: block;
+        width: 146px;
+        margin: 25px auto;
+        font-size: $font-size;
+        font-weight: bold;
+        color: $dark-gray;
+        @include tablet {
+            margin: 30px 0;
+            width: 50%;
+            text-align: center;
+        };
+        @include desktop {
+            width: 30%;
+            font-size: 18px;
+            margin: 33px 0;
+        };
+    }
+    //вынести отдельно кнопку как блок
+    &__order-btn {
+        width: 100%;
+        height: 50px;
+        text-decoration: none;
+        text-transform: uppercase;
+        background: $white;
+        border: solid $dark-gray 2px;
+        margin-bottom: 40px;
+        @include tablet {
+            width: 50%;
+            margin-bottom: 130px;
+        };
+        @include desktop {
+            width: 30%;
+            margin-bottom: 150px;
+        };
+    }
+    &__delimiter {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        bottom: -70px;
+        right: 0;
+        fill: $light-gray;
+        @include tablet {
+            bottom: 0;
+            right: 0;
+        }
+    }
+    // &::after {
+    //     content: '';
+    //     position: absolute;
+    //     bottom: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 10px;
+    //     background: url('../img/zigzag-line-desktop.png') no-repeat;
+    //     @include tablet {
+    //         display: none;
+    //     };
+    // }
+}
+.product-info {
+    font-size: $font-size-sm;
+    line-height: 20px;
+    &__item td {
+        padding: 10px 0;
+        border-bottom: solid $light-gray 1px;
+    }
+}
