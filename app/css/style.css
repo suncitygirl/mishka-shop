@@ -837,6 +837,20 @@ h1, h2 {
   font-size: 2.4rem;
   line-height: 30px; }
 
+@media (min-width: 760px) {
+  .about__heading {
+    font-size: 40px;
+    line-height: 50px;
+    margin-top: -30px;
+    margin-bottom: 45px; } }
+
+@media (min-width: 760px) and (min-width: 1150px) {
+  .about__heading {
+    margin-left: 15.21739%;
+    font-size: 5rem;
+    line-height: 57px;
+    margin-top: -20px; } }
+
 .about__list {
   display: -ms-flexbox;
   display: flex;
@@ -846,22 +860,43 @@ h1, h2 {
   justify-content: space-between;
   min-height: 710px; }
 
+@media (min-width: 760px) {
+  .about__list {
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    min-height: 410px; } }
+
+@media (min-width: 760px) and (min-width: 1150px) {
+  .about__list {
+    padding: 0 15.21739%; } }
+
 .about__item {
   position: relative;
   font-weight: bold;
   padding-right: 1%; }
 
+@media (min-width: 760px) {
+  .about__item {
+    padding: 0;
+    width: 50%;
+    font-size: 2rem; }
+  .about__item:nth-child(2n+1) {
+    width: 45%; }
+  .about__item:nth-child(2n) {
+    width: 45%; } }
+
 .about__icon {
   position: relative;
   top: 0;
   left: 0;
-  height: 30px;
+  height: 40px;
   width: auto;
   margin-bottom: 18px;
   fill: #63d1bb; }
 
 .about__icon--1 {
-  height: 40px;
   width: 35px; }
 
 .about__icon--2 {
@@ -874,11 +909,9 @@ h1, h2 {
   width: 31px; }
 
 .about__icon--5 {
-  height: 23px;
   width: 54px; }
 
 .about__icon--6 {
-  height: 32px;
   width: 32px; }
 
 html {
