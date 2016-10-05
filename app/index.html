@@ -34,7 +34,7 @@
             />
         </symbol>
         <symbol viewBox="-11.34 -28.346 46.68 81.691" id="icon-flag">
-            <path d="M-3.561-24.455v38.9l38.9-19.451-38.9-19.449zm-7.779 77.801v-81.691h3.805v81.691h-3.805z" />
+            <path id="icon-flag__triangle" d="M-3.561-24.455v38.9l38.9-19.451-38.9-19.449zm-7.779 77.801v-81.691h3.805v81.691h-3.805z" />
             <path d="M-11.34-28.346h3.805v81.691h-3.805z" />
         </symbol>
         <symbol viewBox="53.115 53.19 21.769 21.334" id="icon-insta">
@@ -398,8 +398,8 @@
                             <div class="carousel__item-content">
                                 <p class="carousel__text">
                                     Заказала армиллярную сферу - идеальный подарок, девочки на проводе молодцы, в общем, первый раз в жизни отважилась купить подарок в интернет-магазине, и не пожалела! расписала всем подарки отсюда на два года вперед
-                                  </p>
-                                    <b class="carousel__author">Анна Свободина</b>
+                                </p>
+                                <b class="carousel__author">Анна Свободина</b>
                                 <span class="carousel__author-info">@kequekekkeke</span>
                             </div>
                         </div>
@@ -448,22 +448,29 @@
                     </div>
                     <a class="review__open-btn btn" href="#">Написать</a>
                 </div>
-              </div>
-              <svg class="review__delimiter">
-                  <use xlink:href="#bg-zigzag-line"></use>
-              </svg>
+            </div>
+            <svg class="review__delimiter">
+                <use xlink:href="#bg-zigzag-line"></use>
+            </svg>
         </section>
         <section class="contacts">
-            <h2 class="contacts__heading">Контакты</h2>
-            <div class="contacrs__text">
-                <span class="contact__text--left">e-mail:</span>
-                <span class="contact__text--right">info@mimimishkashop.ru</span>
-                <span class="contact__text--left">адрес:</span>
-                <span class="contact__text--right">г.&nbsp;Санкт-Петербург, ул.&nbsp;Большая Конюшенная, д.&nbsp;19/8&nbsp;офис&nbsp;101</span>
-            </div>
-            <div class="map"></div>
-            <div class="feedback">
-                <a class="feedback-btn" href="#">Напишите нам</a>
+            <div class="wrapper">
+                <h2 class="contacts__heading">Контакты</h2>
+                <div class="contacts__text">
+                    <span class="contacts__text--left">e-mail:</span>
+                    <span class="contacts__text--right">info@mimimishkashop.ru</span>
+                    <span class="contacts__text--left">адрес:</span>
+                    <span class="contacts__text--right">г.&nbsp;Санкт-Петербург, ул.&nbsp;Большая&nbsp;Конюшенная,<br>д.&nbsp;19/8&nbsp;офис&nbsp;101</span>
+                </div>
+                <div class="map">
+                    <div id="map"></div>
+                </div>
+                <a class="contacts__feedback-btn btn" href="#">Напишите нам</a>
+                <div class="contacts__icon" hidden>
+                    <svg class="icon-flag">
+                        <use xlink:href="#icon-flag"></use>
+                    </svg>
+                </div>
             </div>
         </section>
     </main>
@@ -475,7 +482,10 @@
         </div>
         <a class="copyright" href="#">Разработано:</a>
     </footer>
-    <script src="js/main-nav.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" defer></script>
+    <script src="js/main-nav.js" async></script>
+    <script src="js/map.js" defer></script>
+    </script>
 </body>
 
 </html>

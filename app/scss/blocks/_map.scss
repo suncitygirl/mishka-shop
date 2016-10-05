@@ -1,0 +1,18 @@
+.map {
+  position: relative;
+  z-index: 1;
+  height: 455px;
+  width: 120%;
+  margin-left: -10%;
+  @include desktop {
+    margin-left: 0;
+    width: 50%;
+    float: right;
+    margin-top: -110px;
+    @include clearfix;
+  };
+}
+#map {
+  height: 100%;
+  width: 100%;
+}

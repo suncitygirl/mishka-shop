@@ -5,6 +5,8 @@
     text-decoration: none;
     text-transform: uppercase;
     text-align: center;
+    font-weight: bold;
+    color: $dark-gray;
     background: $white;
     border: solid $dark-gray 2px;
     @include tablet {

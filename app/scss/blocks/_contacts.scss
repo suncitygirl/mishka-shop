@@ -1,0 +1,91 @@
+.contacts {
+    position: relative;
+    padding: 35px 0;
+    @include desktop {
+      padding-top: 130px;
+      padding-bottom: 100px;
+      padding-left: 175px/$min-desktop-width * 100%;
+      @include clearfix;
+    };
+    &__heading {
+        font-size: $font-size--bg;
+        line-height: 30px;
+        @include tablet {
+            font-size: 40px;
+            line-height: 50px;
+        };
+        @include desktop {
+          font-size: 50px;
+          line-height: 57px;
+        };
+    }
+    &__text {
+        margin-top: 35px;
+        margin-bottom: 35px;
+        font-size: 0;
+        line-height: 30px;
+        @include tablet {
+            font-size: 16px;
+            line-height: 30px;
+        };
+        @include desktop {
+          display: inline-block;
+          width: 50% - 175px/$min-desktop-width * 100%;
+        };
+        &--left {
+            display: inline-block;
+            width: 30%;
+            min-height: 60px;
+            font-size: $font-size-sm;
+            vertical-align: top;
+            @include tablet {
+                width: 9%;
+            };
+            @include desktop {
+              width: 30%;
+            };
+        }
+        &--right {
+            display: inline-block;
+            width: 70%;
+            min-height: 60px;
+            font-size: $font-size-sm;
+            vertical-align: top;
+            @include tablet {
+                width: 38%;
+            };
+            @include desktop {
+              width: 60%;
+            };
+        }
+    }
+    &__feedback-btn {
+        margin-top: 35px;
+        margin-left: auto;
+        margin-right: auto;
+        @include tablet {
+            width: 35%;
+        };
+        @include desktop {
+          margin-left: 0;
+          width: 30%;
+        };
+    }
+    &__icon {
+        @include tablet {
+            height: 82px;
+            display: block;
+            position: absolute;
+            top: 35px;
+            right: -8.5%;
+        };
+        @include desktop {
+          left: 0;
+          top: 113px;
+        };
+    }
+}
+
+#icon-flag__triangle {
+  fill: $aquamarine;
+}

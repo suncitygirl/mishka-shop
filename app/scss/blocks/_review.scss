@@ -50,11 +50,11 @@
         right: 0;
         fill: $light-gray;
         @include tablet {
-            bottom: -140px;
+            bottom: -145px;
             right: 0;
         }
         @include desktop {
-          bottom: 160px;
+          bottom: -150px;
         };
     }
 }
