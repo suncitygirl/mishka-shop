@@ -308,7 +308,7 @@
                 <img src="../img/triple-set-mobile@1x.jpg">
             </picture>
             <b class="featuring__price">Цена: 990 руб.</b>
-            <button class="featuring__order-btn" type="submit" name="place-order">Заказать</button>
+            <button class="featuring__order-btn btn" type="submit" name="place-order">Заказать</button>
             <svg class="featuring__delimiter">
                 <use xlink:href="#bg-zigzag-line"></use>
             </svg>
@@ -319,65 +319,139 @@
                 <ul class="about__list">
                     <li class="about__item about__item--materials">
                         <div class="about__icon about__icon--1">
-                          <svg class="icon-feature-1">
-                              <use xlink:href="#icon-feature-1"></use>
-                          </svg>
+                            <svg class="icon-feature-1">
+                                <use xlink:href="#icon-feature-1"></use>
+                            </svg>
                         </div>
                         Экологически чистые материалы
                     </li>
                     <li class="about__item about__item--price">
-                      <div class="about__icon about__icon--2">
-                        <svg class="icon-feature-3">
-                            <use xlink:href="#icon-feature-3"></use>
-                        </svg>
-                      </div>
+                        <div class="about__icon about__icon--2">
+                            <svg class="icon-feature-3">
+                                <use xlink:href="#icon-feature-3"></use>
+                            </svg>
+                        </div>
                         Скандинавский стиль по российской цене
                     </li>
                     <li class="about__item about__item--like">
-                      <div class="about__icon about__icon--3">
-                        <svg class="icon-feature-5">
-                            <use xlink:href="#icon-feature-5"></use>
-                        </svg>
-                      </div>
+                        <div class="about__icon about__icon--3">
+                            <svg class="icon-feature-5">
+                                <use xlink:href="#icon-feature-5"></use>
+                            </svg>
+                        </div>
                         Увеличивает лайки на фотографиях
                     </li>
                     <li class="about__item about__item--handmade">
-                      <div class="about__icon about__icon--4">
-                        <svg class="icon-feature-2">
-                            <use xlink:href="#icon-feature-2"></use>
-                        </svg>
-                      </div>
+                        <div class="about__icon about__icon--4">
+                            <svg class="icon-feature-2">
+                                <use xlink:href="#icon-feature-2"></use>
+                            </svg>
+                        </div>
                         Связано вручную с любовью и умилением
                     </li>
                     <li class="about__item about__item--national">
-                      <div class="about__icon about__icon--5">
-                        <svg class="icon-feature-4">
-                            <use xlink:href="#icon-feature-4"></use>
-                        </svg>
-                      </div>
+                        <div class="about__icon about__icon--5">
+                            <svg class="icon-feature-4">
+                                <use xlink:href="#icon-feature-4"></use>
+                            </svg>
+                        </div>
                         Поддержка отечественного производителя
                     </li>
                     <li class="about__item about__item--">
-                      <div class="about__icon about__icon--6">
-                        <svg class="icon-feature-6">
-                            <use xlink:href="#icon-feature-6"></use>
-                        </svg>
-                      </div>
+                        <div class="about__icon about__icon--6">
+                            <svg class="icon-feature-6">
+                                <use xlink:href="#icon-feature-6"></use>
+                            </svg>
+                        </div>
                         Поставляется в подарочной упаковке
                     </li>
                 </ul>
             </div>
         </section>
         <section class="review">
-            <h2 class="review__heading"></h2>
-            <div class="review__item carousel">
-                <p class="carousel__text">
-                    Я молодая мама, но все равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке и мои фотографии сразу стали более стильнее, а также набирают больше лайков!
-                </p>
-                <b class="carousel__author">Анастастия Красильникова</b>
-                <span class="carousel__author-contacts"></span>
-            </div>
-            <a class="open-review-form" href="#">Написать</a>
+            <div class="wrapper">
+                <h2 class="review__heading">Отзывы</h2>
+                <div class="review__carousel carousel">
+                    <div class="carousel__inner">
+                        <input class="carousel__open" type="radio" id="carousel__open--1" name="carousel" hidden checked>
+                        <div class="carousel__item">
+                            <div class="carousel__item-content">
+                                <p class="carousel__text">
+                                    Я молодая мама, но все равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке и мои фотографии сразу стали более стильнее, а также набирают больше лайков!
+                                </p>
+                                <b class="carousel__author">Анастастия Красильникова</b>
+                                <span class="carousel__author-info">@misssiskras</span>
+                            </div>
+                        </div>
+                        <input class="carousel__open" type="radio" id="carousel__open--2" name="carousel" hidden>
+                        <div class="carousel__item">
+                            <div class="carousel__item-content">
+                                <p class="carousel__text">
+                                    Заказала какую-то ненужную мне ерунду! Качество отменное!! Доставка быстрая, курьером. Первый раз по недоразумению пришел не тот размер. Но представители магазина со всей ответственностью подошли к проблеме и разрешили ее в кратчайшие сроки.
+                                </p>
+                                <b class="carousel__author">Елена Свиридова</b>
+                                <span class="carousel__author-info">@murmurmuryalamp</span>
+                            </div>
+                        </div>
+                        <input class="carousel__open" type="radio" id="carousel__open--3" name="carousel" hidden>
+                        <div class="carousel__item">
+                            <div class="carousel__item-content">
+                                <p class="carousel__text">
+                                    Заказала армиллярную сферу - идеальный подарок, девочки на проводе молодцы, в общем, первый раз в жизни отважилась купить подарок в интернет-магазине, и не пожалела! расписала всем подарки отсюда на два года вперед
+                                  </p>
+                                    <b class="carousel__author">Анна Свободина</b>
+                                <span class="carousel__author-info">@kequekekkeke</span>
+                            </div>
+                        </div>
+                        <label for="carousel__open--3" class="carousel__control carousel__control--prev carousel__control--1">
+                            <div class="carousel__arrow-icon">
+                                <svg class="icon-left-arrow">
+                                    <use xlink:href="#icon-left-arrow"></use>
+                                </svg>
+                            </div>
+                        </label>
+                        <label for="carousel__open--2" class="carousel__control carousel__control--next carousel__control--1">
+                            <div class="carousel__arrow-icon">
+                                <svg class="icon-right-arrow">
+                                    <use xlink:href="#icon-right-arrow"></use>
+                                </svg>
+                            </div>
+                        </label>
+                        <label for="carousel__open--1" class="carousel__control carousel__control--prev carousel__control--2">
+                            <div class="carousel__arrow-icon">
+                                <svg class="icon-left-arrow">
+                                    <use xlink:href="#icon-left-arrow"></use>
+                                </svg>
+                            </div>
+                        </label>
+                        <label for="carousel__open--3" class="carousel__control carousel__control--next carousel__control--2">
+                            <div class="carousel__arrow-icon">
+                                <svg class="icon-right-arrow">
+                                    <use xlink:href="#icon-right-arrow"></use>
+                                </svg>
+                            </div>
+                        </label>
+                        <label for="carousel__open--2" class="carousel__control carousel__control--prev carousel__control--3">
+                            <div class="carousel__arrow-icon">
+                                <svg class="icon-left-arrow">
+                                    <use xlink:href="#icon-left-arrow"></use>
+                                </svg>
+                            </div>
+                        </label>
+                        <label for="carousel__open--1" class="carousel__control carousel__control--next carousel__control--3">
+                            <div class="carousel__arrow-icon">
+                                <svg class="icon-right-arrow">
+                                    <use xlink:href="#icon-right-arrow"></use>
+                                </svg>
+                            </div>
+                        </label>
+                    </div>
+                    <a class="review__open-btn btn" href="#">Написать</a>
+                </div>
+              </div>
+              <svg class="review__delimiter">
+                  <use xlink:href="#bg-zigzag-line"></use>
+              </svg>
         </section>
         <section class="contacts">
             <h2 class="contacts__heading">Контакты</h2>

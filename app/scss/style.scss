@@ -2,14 +2,18 @@
 @import "helpers/mixins";
 @import "helpers/variables";
 @import "helpers/partial-reset";
+@import "blocks/buttons";
 @import "blocks/main-nav";
 @import "blocks/intro";
 @import "blocks/featuring";
 @import "blocks/about";
+@import "blocks/carousel";
+@import "blocks/review";
 
 html {
   font-family: $font-family-base;
   font-size: $html-size-base;
+  box-sizing: border-box;
 }
 
 body {
@@ -28,5 +32,5 @@ body {
 }
 
 * {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }

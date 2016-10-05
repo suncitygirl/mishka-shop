@@ -1,0 +1,16 @@
+.btn {
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    background: $white;
+    border: solid $dark-gray 2px;
+    @include tablet {
+        width: 50%;
+    };
+    @include desktop {
+        width: 30%;
+    };
+}

@@ -1,77 +1,77 @@
 .about {
-  &__heading {
-    margin-top: 25px;
-    margin-bottom: 30px;
-    font-size: $font-size--bg;
-    line-height: 30px;
-    @include tablet {
-      font-size: 40px;
-      line-height: 50px;
-      margin-top: -30px;
-      margin-bottom: 45px;
-      @include desktop {
-        margin-left: 175px/$min-desktop-width * 100%;
-        font-size: $font-size--lg;
-        line-height: 57px;
-        margin-top: -20px;
-      };
-    };
-  }
-  &__list {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 710px;
-    @include tablet {
-      flex-direction: row;
-      flex-wrap: wrap;
-      min-height: 410px;
-      @include desktop {
-        padding: 0 175px/$min-desktop-width * 100%;
-      };
-    };
-  }
-  &__item {
-    position: relative;
-    font-weight: bold;
-    padding-right: 1%;
-    @include tablet {
-      padding: 0;
-      width: 50%;
-      font-size: $font-size--md;
-      &:nth-child(2n+1) {
-        width: 45%;
-      }
-      &:nth-child(2n) {
-        width: 45%;
-      }
-    };
-  }
-  &__icon {
-    position: relative;
-    top: 0;
-    left: 0;
-    height: 40px;
-    width: auto;
-    margin-bottom: 18px;
-    fill: $aquamarine;
-    &--1 {
-    width: 35px;
+    &__heading {
+        margin-top: 25px;
+        margin-bottom: 30px;
+        font-size: $font-size--bg;
+        line-height: 30px;
+        @include tablet {
+            font-size: 40px;
+            line-height: 50px;
+            margin-top: -30px;
+            margin-bottom: 45px;
+            @include desktop {
+                margin-left: 175px/$min-desktop-width * 100%;
+                font-size: $font-size--lg;
+                line-height: 57px;
+                margin-top: -20px;
+            };
+        };
     }
-    &--2 {
-      width: 49px;
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 710px;
+        @include tablet {
+            flex-direction: row;
+            flex-wrap: wrap;
+            min-height: 410px;
+            @include desktop {
+                padding: 0 175px/$min-desktop-width * 100%;
+            };
+        };
     }
-    &--3 {
-      width: 35px;
+    &__item {
+        position: relative;
+        font-weight: bold;
+        padding-right: 1%;
+        @include tablet {
+            padding: 0;
+            width: 50%;
+            font-size: $font-size--md;
+            &:nth-child(2n+1) {
+                width: 45%;
+            }
+            &:nth-child(2n) {
+                width: 45%;
+            }
+        };
     }
-    &--4 {
-      width: 31px;
+    &__icon {
+        position: relative;
+        top: 0;
+        left: 0;
+        height: 40px;
+        width: auto;
+        margin-bottom: 18px;
+        fill: $aquamarine;
+        &--1 {
+            width: 35px;
+        }
+        &--2 {
+            width: 49px;
+        }
+        &--3 {
+            width: 35px;
+        }
+        &--4 {
+            width: 31px;
+        }
+        &--5 {
+            width: 54px;
+        }
+        &--6 {
+            width: 32px;
+        }
     }
-    &--5 {
-      width: 54px;
-    }
-    &--6 {
-      width: 32px;
-    }
-  }
 }
