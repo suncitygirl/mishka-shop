@@ -475,12 +475,29 @@
         </section>
     </main>
     <footer class="main-footer">
-        <div class="social-links">
-            <a class="instagtam" href="#"></a>
-            <a class="facebook" href="#"></a>
-            <a class="twitter" href="#"></a>
+        <div class="main-footer__logo" hidden>
+            <svg class="logo-footer">
+                <use xlink:href="#logo-footer"></use>
+            </svg>
         </div>
-        <a class="copyright" href="#">Разработано:</a>
+        <div class="main-footer__social social-links">
+            <a class="social-links__item social-links__item--instagtam" href="#">
+              <svg class="icon-insta">
+                  <use xlink:href="#icon-insta"></use>
+              </svg>
+            </a>
+            <a class="social-links__item social-links__item--facebook" href="#">
+              <svg class="icon-fb">
+                  <use xlink:href="#icon-fb"></use>
+              </svg>
+            </a>
+            <a class="social-links__item social-links__item--twitter" href="#">
+              <svg class="icon-twitter">
+                  <use xlink:href="#icon-twitter"></use>
+              </svg>
+            </a>
+        </div>
+        <a class="main-footer__copyright" href="#">github.com/suncitygirl</a>
     </footer>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" defer></script>
     <script src="js/main-nav.js" async></script>

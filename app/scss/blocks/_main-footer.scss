@@ -1,0 +1,78 @@
+.main-footer {
+  position: relative;
+  padding: 25px 0;
+  background-color: $light-gray;
+  font-size: 0;
+  @include tablet {
+    padding: 45px 50px/$min-tablet-width * 100%;
+  };
+  @include desktop {
+    padding: 50px 50px/$min-desktop-width * 100%;
+  };
+  &__copyright {
+    display: block;
+    padding-top: 25px;
+    margin: 0 auto;
+    font-size: $font-size-sm;
+    font-weight: bold;
+    text-align: center;
+    @include tablet {
+      display: inline-block;
+      width: 33%;
+      text-align: right;
+      padding: 0;
+      transform: translate(0, -6px);
+    };
+  }
+  &__social {
+    margin: 0 auto;
+  }
+  &::after {
+    content: '';
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background-color: $gray;
+    width: 100% - 30px/$min-mobile-width * 100% * 2;
+    margin: 0 30px/$min-mobile-width * 100%;
+    @include tablet {
+      display: none;
+    };
+  }
+  &__logo {
+    @include tablet {
+      display: inline-block;
+      width: 33%;
+      height: 40px;
+      & svg {
+        width: 120px;
+      }
+    };
+  }
+}
+
+.social-links {
+  width: 145px;
+  padding-bottom: 25px;
+  @include tablet {
+    display: inline-block;
+    width: 33%;
+    text-align: center;
+    padding: 0;
+  };
+  &__item {
+    display: inline-block;
+    width: 22px;
+    margin-right: 35px;
+    svg {
+      height: 30px;
+    }
+    &--facebook {
+      width: 15px;
+    }
+    &--twitter {
+      margin-right: 0;
+    }
+  }
+}

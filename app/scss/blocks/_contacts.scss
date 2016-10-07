@@ -1,4 +1,6 @@
 .contacts {
+  max-width: 100%;
+  overflow-x: hidden;
     position: relative;
     padding: 35px 0;
     @include desktop {
@@ -74,13 +76,14 @@
     &__icon {
         @include tablet {
             height: 82px;
-            display: block;
+            width: 47px;
             position: absolute;
+            display: block;
             top: 35px;
-            right: -8.5%;
+            right: 50px/$min-tablet-width * 100%;
         };
         @include desktop {
-          left: 0;
+          left: 50px/$min-desktop-width * 100%;
           top: 113px;
         };
     }

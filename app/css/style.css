@@ -1030,7 +1030,7 @@ h1, h2 {
   .review {
     margin-bottom: 80px;
     padding: 0 15.21739%;
-    background-position: 4.34783%; } }
+    background-position: 6.43478%; } }
 
 .review__heading {
   font-size: 2.4rem;
@@ -1086,6 +1086,8 @@ h1, h2 {
     bottom: -150px; } }
 
 .contacts {
+  max-width: 100%;
+  overflow-x: hidden;
   position: relative;
   padding: 35px 0; }
 
@@ -1177,14 +1179,15 @@ h1, h2 {
 @media (min-width: 760px) {
   .contacts__icon {
     height: 82px;
-    display: block;
+    width: 47px;
     position: absolute;
+    display: block;
     top: 35px;
-    right: -8.5%; } }
+    right: 6.57895%; } }
 
 @media (min-width: 1150px) {
   .contacts__icon {
-    left: 0;
+    left: 4.34783%;
     top: 113px; } }
 
 #icon-flag__triangle {
@@ -1212,6 +1215,87 @@ h1, h2 {
 #map {
   height: 100%;
   width: 100%; }
+
+.main-footer {
+  position: relative;
+  padding: 25px 0;
+  background-color: #f1f1f1;
+  font-size: 0; }
+
+@media (min-width: 760px) {
+  .main-footer {
+    padding: 45px 6.57895%; } }
+
+@media (min-width: 1150px) {
+  .main-footer {
+    padding: 50px 4.34783%; } }
+
+.main-footer__copyright {
+  display: block;
+  padding-top: 25px;
+  margin: 0 auto;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center; }
+
+@media (min-width: 760px) {
+  .main-footer__copyright {
+    display: inline-block;
+    width: 33%;
+    text-align: right;
+    padding: 0;
+    -ms-transform: translate(0, -6px);
+    transform: translate(0, -6px); } }
+
+.main-footer__social {
+  margin: 0 auto; }
+
+.main-footer::after {
+  content: '';
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background-color: #d3d2d2;
+  width: 81.25%;
+  margin: 0 9.375%; }
+
+@media (min-width: 760px) {
+  .main-footer::after {
+    display: none; } }
+
+@media (min-width: 760px) {
+  .main-footer__logo {
+    display: inline-block;
+    width: 33%;
+    height: 40px; }
+  .main-footer__logo svg {
+    width: 120px; } }
+
+.social-links {
+  width: 145px;
+  padding-bottom: 25px; }
+
+@media (min-width: 760px) {
+  .social-links {
+    display: inline-block;
+    width: 33%;
+    text-align: center;
+    padding: 0; } }
+
+.social-links__item {
+  display: inline-block;
+  width: 22px;
+  margin-right: 35px; }
+
+.social-links__item svg {
+  height: 30px; }
+
+.social-links__item--facebook {
+  width: 15px; }
+
+.social-links__item--twitter {
+  margin-right: 0; }
 
 html {
   font-family: Verdana, Geneva, sans-serif;
