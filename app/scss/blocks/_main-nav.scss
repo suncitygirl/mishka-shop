@@ -27,7 +27,9 @@
                     width: 50%;
                 }
                 @include desktop {
-                    top: 0;
+                  left: (50px/$min-desktop-width * 100%);
+                  width: 320px/$min-desktop-width * 100%;
+                  top: 0;
                 };
             }
         };
@@ -140,6 +142,9 @@
             height: 100%;
             display: inline-block;
             padding: 0 (50px/$min-tablet-width * 100%) 0 (50px/$min-tablet-width * 100%);
+        };
+        @include desktop {
+          padding: 0 (50px/$min-desktop-width * 100%) 0 (50px/$min-desktop-width * 100%);
         };
     }
     &__open-btn {

@@ -449,6 +449,8 @@ h1, h2 {
 
 @media (min-width: 760px) and (min-width: 1150px) {
   .main-nav__list--wide {
+    left: 4.34783%;
+    width: 27.82609%;
     top: 0; } }
 
 .main-nav__dropdown-list {
@@ -556,6 +558,10 @@ h1, h2 {
     height: 100%;
     display: inline-block;
     padding: 0 6.57895% 0 6.57895%; } }
+
+@media (min-width: 1150px) {
+  .main-nav__wrapper {
+    padding: 0 4.34783% 0 4.34783%; } }
 
 .main-nav__open-btn {
   display: block;
