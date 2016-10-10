@@ -249,10 +249,10 @@
         </header>
         <div class="wrapper">
             <p class="order-content__description">
-                Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+                <span class="order-content__description-first-line">Мы будем рады воплотить в жизнь ваши пожелания!</span> Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
             </p>
             <form class="order-form" method="post">
-                <fieldset class="order-form__item order-for__item--type">
+                <fieldset class="order-form__item order-form__item--type">
                     <legend class="order-form__tag">Тип</legend>
                     <!-- <ul class="order-form__filter">
                     <li class="order-form__filter-item"> -->
@@ -265,7 +265,7 @@
                     <!-- </li> -->
                     </ul>
                 </fieldset>
-                <fieldset class="order-form__item order-for__item--color">
+                <fieldset class="order-form__item order-form__item--color">
                     <legend class="order-form__tag">Цвет</legend>
                     <!-- <ul class="order-form__filter"> -->
                     <!-- <li class="order-form__filter-item"> -->
@@ -294,7 +294,7 @@
                     <!-- </li>
                 </ul> -->
                 </fieldset>
-                <fieldset class="order-form__item order-for__item--fullname">
+                <fieldset class="order-form__item order-form__item--fullname">
                     <legend class="order-form__tag">ФИО</legend>
                     <!-- <ul class="order-form__filter">
                     <li class="order-form__filter-item"> -->
@@ -311,15 +311,25 @@
                     <!-- </li>
                 </ul> -->
                 </fieldset>
-                <fieldset class="order-form__item order-for__item--phone">
-                    <legend class="order-form__tag">Тел.</legend>
+                <fieldset class="order-form__item order-form__item--phone">
+                    <legend class="order-form__tag order-form__tag--phone">Тел.</legend>
                     <input type="tel" name="phone" placeholder="+7 XXX XX XX" required>
+                    <div class="order-form__icon order-form__icon--phone">
+                        <svg class="icon-phone">
+                            <use xlink:href="#icon-phone"></use>
+                        </svg>
+                    </div>
                 </fieldset>
-                <fieldset class="order-form__item order-for__item--email">
+                <fieldset class="order-form__item order-form__item--email">
                     <legend class="order-form__tag">E-mail</legend>
                     <input type="email" name="email" placeholder="Ваш e-mail" required>
+                    <div class="order-form__icon order-form__icon--email">
+                        <svg class="icon-mail">
+                            <use xlink:href="#icon-mail"></use>
+                        </svg>
+                    </div>
                 </fieldset>
-                <fieldset class="order-form__item order-for__item--extra">
+                <fieldset class="order-form__item order-form__item--extra">
                     <legend class="order-form__tag">Доп.</legend>
                     <textarea name="additional-information" rows="8" cols="20" placeholder="Опишите все ваши пожелания к заказу"></textarea>
                 </fieldset>

@@ -23,6 +23,7 @@ html {
 body {
   font-size: $font-size;
   min-width: 320px;
+  overflow-x: hidden;
 }
 
 .wrapper {

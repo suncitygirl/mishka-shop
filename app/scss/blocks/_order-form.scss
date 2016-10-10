@@ -1,10 +1,48 @@
 .order-form {
     &__item {
+        position: relative;
         border: none;
         margin: 0;
         padding: 1px;
         margin-bottom: 30px;
         overflow-x: hidden;
+        font-size: 0;
+        @include tablet {
+            margin-bottom: 40px;
+            padding-left: 175px/$min-tablet-width * 100%;
+            padding-top: 15px;
+            &--color {
+                padding-top: 72px;
+                padding-bottom: 23px;
+                overflow: visible;
+            }
+            &--phone {
+              margin-bottom: 0;
+              padding-top: 45px;
+            }
+            &--email {
+              padding-bottom: 40px;
+            }
+            &--color,
+            &--email,
+            &--phone {
+              overflow: visible;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    z-index: -1;
+                    top: 0;
+                    right: 0;
+                    height: 100%;
+                    width: 150%;
+                    margin-right: -20%;
+                    background-color: $light-gray;
+                }
+            }
+        };
+        @include desktop {
+          padding-left: 175px/$min-desktop-width * 100%;
+        };
     }
     &__tag {
         position: relative;
@@ -13,6 +51,15 @@
         font-weight: bold;
         color: $aquamarine;
         text-transform: uppercase;
+        font-size: $font-size;
+        @include tablet {
+            position: absolute;
+            right: 0;
+            top: 15px;
+            &--phone {
+              top: 65px;
+            }
+        };
         &::before {
             content: "";
             margin-left: 75px;
@@ -22,6 +69,9 @@
             width: 100%;
             overflow-x: hidden;
             background-color: $aquamarine;
+            @include tablet {
+                display: none;
+            };
         }
     }
     &__checkbox-label,
@@ -34,10 +84,16 @@
         font-size: $font-size;
         line-height: 19px;
         font-weight: bold;
+        @include tablet {
+            font-size: 18px;
+        };
         &:last-child {
             margin-bottom: 5px;
             &::before {
                 top: -10px;
+                @include tablet {
+                    top: -16px;
+                };
             }
         }
         &::before {
@@ -48,44 +104,61 @@
             width: 40px;
             height: 40px;
             border: solid $black 2px;
+            @include tablet {
+                top: -11px;
+            };
         }
     }
+    &__checkbox-label {
+        @include tablet {
+            display: inline-block;
+            width: 50%;
+        };
+        @include desktop {
+          width: 33%;
+        };
+    }
     &__radio-label {
-        display: block;
-        position: relative;
-        height: 40px;
-        padding-left: 75px;
-        margin-bottom: 30px;
-        font-size: $font-size;
-        line-height: 19px;
-        font-weight: bold;
-        &:last-child {
-            margin-bottom: 5px;
-            &::before {
-                top: -10px;
-            }
-        }
         &::before {
-            content: '';
-            position: absolute;
-            top: -5px;
-            left: 0;
-            width: 40px;
-            height: 40px;
-            border: solid $black 2px;
             border-radius: 50%;
         }
     }
     &__text-label {
-      display: block;
-      margin-bottom: 5px;
-      font-size: $font-size;
-      line-height: 19px;
-      font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+        font-size: $font-size;
+        line-height: 19px;
+        font-weight: bold;
+        @include tablet {
+            display: inline-block;
+        };
     }
     &__submit-btn {
-      margin-top: 56px;
-      margin-bottom: 60px;
+        margin-top: 56px;
+        margin-bottom: 60px;
+        @include tablet {
+          width: 25%;
+          margin-left: 175px/$min-tablet-width * 100%;
+        };
+        @include desktop {
+          margin-left: 175px/$min-desktop-width * 100%;
+        };
+    }
+    &__icon {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        height: 30px;
+        width: 30px;
+        fill: $gray;
+        @include tablet {
+          &--phone {
+            top: 50px;
+          }
+          &--email {
+            top: 25px;
+          }
+        };
     }
 }
 input[type="radio"]:checked + .order-form__radio-label::after {
@@ -97,9 +170,15 @@ input[type="radio"]:checked + .order-form__radio-label::after {
     height: 15px;
     background-color: $aquamarine;
     border-radius: 50%;
+    @include tablet {
+        top: 4px;
+    };
 }
 input[type="radio"]:checked + .order-form__radio-label:last-child::after {
     top: 5px;
+    @include tablet {
+        top: -1px;
+    };
 }
 input[type="checkbox"]:checked + .order-form__checkbox-label::after {
     content: "";
@@ -111,27 +190,49 @@ input[type="checkbox"]:checked + .order-form__checkbox-label::after {
     border-left: solid $black 3px;
     border-bottom: solid $black 3px;
     transform: rotate(-45deg);
+    @include tablet {
+        top: -1px;
+    };
 }
 input[type="checkbox"]:checked + .order-form__checkbox-label:last-child::after {
     top: 0;
+    @include tablet {
+        top: -6px;
+    };
 }
 input[type="email"],
-input[type="text"],
 input[type="tel"],
+input[type="text"],
 textarea {
     width: 100%;
     padding: 15px;
+    font-size: $font-size;
     border: none;
     outline: none;
+    @include tablet {
+        font-size: 18px;
+    };
 }
 input[type="email"],
-input[type="text"],
-input[type="tel"] {
-  margin-bottom: 24px;
-  border-bottom: solid $black 2px;
-  line-height: 19px;
+input[type="tel"],
+input[type="text"] {
+    margin-bottom: 24px;
+    border-bottom: solid $black 2px;
+    line-height: 19px;
 }
-
 textarea {
-  border: solid $black 2px;
+    border: solid $black 2px;
+    resize: vertical;
+}
+input[type="email"],
+input[type="tel"] {
+    padding-right: 45px;
+    @include tablet {
+      background-color: inherit;
+    };
+}
+input[type="text"] {
+    @include tablet {
+        display: inline-block;
+    };
 }
