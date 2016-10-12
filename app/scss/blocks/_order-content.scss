@@ -1,37 +1,51 @@
 @import "order-form";
-
 .order-content {
-  &__header {
+    // &__header {
+    //   text-align: center;
+    //   background-color: $light-gray;
+    // }
+    // &__heading {
+    //   padding: 70px 0;
+    //   display: inline-block;
+    //   font-size: $font-size--bg;
+    //   line-height: 30px;
+    //   @include tablet {
+    //     padding: 95px 0;
+    //     font-size: 40px;
+    //     line-height: 50px;
+    //   };
+    // }
+    &__description {
+        margin-top: 30px;
+        margin-bottom: 25px;
+        font-size: $font-size-sm;
+        line-height: 26px;
+        @include tablet {
+            margin: 70px 0 60px;
+            font-size: $font-size;
+            line-height: 30px;
+            &-first-line {
+                display: block;
+            }
+        };
+        @include desktop {
+            margin-top: 100px;
+            margin-left: 175px/$min-desktop-width * 100%;
+        };
+    }
+}
+.inner-header {
     text-align: center;
     background-color: $light-gray;
-  }
-  &__heading {
-    padding: 70px 0;
-    display: inline-block;
-    font-size: $font-size--bg;
-    line-height: 30px;
-    @include tablet {
-      padding: 95px 0;
-      font-size: 40px;
-      line-height: 50px;
-    };
-  }
-  &__description {
-    margin-top: 30px;
-    margin-bottom: 25px;
-    font-size: $font-size-sm;
-    line-height: 26px;
-    @include tablet {
-      margin: 70px 0 60px 0;
-      font-size: $font-size;
-      line-height: 30px;
-      &-first-line {
-        display: block;
-      }
-    };
-    @include desktop {
-      margin-top: 100px;
-      margin-left: 175px/$min-desktop-width * 100%;
-    };
-  }
+    &__heading {
+        padding: 70px 0;
+        display: inline-block;
+        font-size: $font-size--bg;
+        line-height: 30px;
+        @include tablet {
+            padding: 95px 0;
+            font-size: 40px;
+            line-height: 50px;
+        }
+    }
 }
