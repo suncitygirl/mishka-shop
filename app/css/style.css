@@ -1585,6 +1585,49 @@ input[type="tel"] {
     font-size: 40px;
     line-height: 50px; } }
 
+.products-list {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.products-list__item {
+  position: relative;
+  width: 100%;
+  margin-top: 30px;
+  border: solid #f1f1f1 2px; }
+
+.products-list__pic {
+  width: 100%; }
+
+.products-list__item-heading {
+  margin: 25px 8.125% 14px 8.125%;
+  font-size: 1.6rem;
+  line-height: 24px;
+  font-weight: bold; }
+
+.products-list__item-description {
+  display: block;
+  margin: 0 8.125% 25px 8.125%;
+  font-size: 1.4rem;
+  font-weight: lighter; }
+
+.products-list__item-price {
+  display: block;
+  padding: 25px 0;
+  margin: 0 8.125%;
+  font-size: 1.6rem;
+  font-weight: bold;
+  border-top: solid #f1f1f1 1px; }
+
+.products-list__cart-icon {
+  position: absolute;
+  width: 20px;
+  bottom: 27px;
+  right: 6.25%; }
+
 html {
   font-family: Verdana, Geneva, sans-serif;
   font-size: 10px;
