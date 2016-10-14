@@ -21,12 +21,16 @@ html {
   font-family: $font-family-base;
   font-size: $html-size-base;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 body {
   font-size: $font-size;
   min-width: 320px;
+  margin: 0 auto;
+  max-width: 1400px;
   overflow-x: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
 .wrapper {
