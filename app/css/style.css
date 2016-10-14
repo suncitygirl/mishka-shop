@@ -596,10 +596,11 @@ img {
 .main-nav__open-icon {
   position: absolute;
   right: 0;
-  top: 9px;
+  top: 5px;
   width: 21px;
   height: 2px;
-  background-color: #000; }
+  background-color: #000;
+  transition: background-color 0.3s ease-out; }
 
 .main-nav__open-icon::after, .main-nav__open-icon::before {
   content: '';
@@ -610,11 +611,24 @@ img {
 
 .main-nav__open-icon::before {
   -ms-transform: translate(0, -5px);
-  transform: translate(0, -5px); }
+  transform: translate(0, -5px);
+  transition: transform 0.4s ease-out; }
 
 .main-nav__open-icon::after {
   -ms-transform: translate(0, 3px);
-  transform: translate(0, 3px); }
+  transform: translate(0, 3px);
+  transition: transform 0.4s ease-out; }
+
+.main-nav__close-btn .main-nav__open-icon {
+  background-color: #fff; }
+
+.main-nav__close-btn .main-nav__open-icon::after {
+  -ms-transform: rotate(45deg) translate(-1px, -2px);
+  transform: rotate(45deg) translate(-1px, -2px); }
+
+.main-nav__close-btn .main-nav__open-icon::before {
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg); }
 
 .logo-mobile__icon {
   display: block; }

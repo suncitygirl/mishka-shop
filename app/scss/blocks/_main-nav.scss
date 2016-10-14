@@ -27,9 +27,9 @@
                     width: 50%;
                 }
                 @include desktop {
-                  left: (50px/$min-desktop-width * 100%);
-                  width: 320px/$min-desktop-width * 100%;
-                  top: 0;
+                    left: (50px/$min-desktop-width * 100%);
+                    width: 320px/$min-desktop-width * 100%;
+                    top: 0;
                 };
             }
         };
@@ -118,9 +118,9 @@
             }
             &--knitting,
             &--sale {
-              @include desktop {
-                margin-left: 20%;
-              };
+                @include desktop {
+                    margin-left: 20%;
+                };
             }
         };
     }
@@ -150,7 +150,7 @@
             padding: 0 (50px/$min-tablet-width * 100%) 0 (50px/$min-tablet-width * 100%);
         };
         @include desktop {
-          padding: 0 (50px/$min-desktop-width * 100%) 0 (50px/$min-desktop-width * 100%);
+            padding: 0 (50px/$min-desktop-width * 100%) 0 (50px/$min-desktop-width * 100%);
         };
     }
     &__open-btn {
@@ -167,10 +167,11 @@
     &__open-icon {
         position: absolute;
         right: 0;
-        top: 9px;
+        top: 5px;
         width: 21px;
         height: 2px;
         background-color: $black;
+        transition: background-color 0.3s ease-out;
         &::after,
         &::before {
             content: '';
@@ -181,9 +182,20 @@
         }
         &::before {
             transform: translate(0, -5px);
+            transition: transform 0.4s ease-out;
         }
         &::after {
             transform: translate(0, 3px);
+            transition: transform 0.4s ease-out;
+        }
+    }
+    &__close-btn &__open-icon {
+        background-color: $white;
+        &::after {
+            transform: rotate(45deg) translate(-1px, -2px);
+        }
+        &::before {
+            transform: rotate(-45deg);
         }
     }
 }
