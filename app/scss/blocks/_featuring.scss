@@ -42,32 +42,48 @@
         line-height: 24px;
         @include tablet {
             float: left;
-            width: 50%;
+            width: 45%;
             margin-bottom: 40px;
         };
         @include desktop {
             width: 80%;
             margin-bottom: 50px;
-            padding-right: 50%;
+            padding-right: 43%;
             font-size: $font-size;
             line-height: 30px;
         };
     }
     &__pic {
+        position: relative;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        max-width: 400px;
         @include tablet {
+            transform: none;
             position: absolute;
+            width: auto;
+            max-width: none;
             top: 105px;
+            left: auto;
             right: 50px/$min-tablet-width * 100%;
         }
+        @include desktop {
+            top: -50px;
+            z-index: -1;
+            right: 50px/$min-desktop-width * 100%;
+        };
     }
     &__info-table {
         margin-bottom: 30px;
         @include tablet {
-            width: 51%;
+            width: 94%;
+            padding-right: 50%;
             margin-bottom: 20px;
         };
         @include desktop {
-            width: 30%;
+            width: 85%;
             margin-bottom: 75px;
             font-size: 15px;
             line-height: 20px;
@@ -81,24 +97,24 @@
         font-weight: bold;
         color: $dark-gray;
         @include tablet {
-            margin: 30px 0;
-            width: 50%;
+            margin: 56px 0 40px;
+            width: 45%;
             text-align: center;
         };
         @include desktop {
-            width: 30%;
+            width: 35%;
             font-size: 18px;
-            margin: 33px 0;
+            margin: 33px 0 60px;
         };
     }
     &__order-btn {
-        margin-bottom: 40px;
+        margin-bottom: 80px;
         @include tablet {
-            width: 50%;
+            width: 45%;
             margin-bottom: 130px;
         };
         @include desktop {
-            width: 30%;
+            width: 35%;
             margin-bottom: 150px;
         };
     }
@@ -106,13 +122,16 @@
         position: absolute;
         z-index: -1;
         width: 100%;
-        bottom: -70px;
+        bottom: -120px;
         right: 0;
         fill: $light-gray;
         @include tablet {
-            bottom: 0;
+            bottom: -135px;
             right: 0;
         }
+        @include desktop {
+            bottom: -155px;
+        };
     }
 }
 .product-info {

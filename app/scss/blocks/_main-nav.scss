@@ -116,6 +116,12 @@
                     font-size: 14px;
                 };
             }
+            &--knitting,
+            &--sale {
+              @include desktop {
+                margin-left: 20%;
+              };
+            }
         };
     }
     &__icon {

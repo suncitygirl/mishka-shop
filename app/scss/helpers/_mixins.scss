@@ -26,6 +26,13 @@
   }
 }
 
+@mixin retina2x {
+  @media(min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+          @content;
+        }
+}
+
 svg {
   max-width: 100%;
   max-height: 100%;
