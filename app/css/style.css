@@ -1651,8 +1651,18 @@ input[type="tel"] {
   margin-top: 30px;
   border: solid #f1f1f1 2px; }
 
+@media (min-width: 760px) {
+  .products-list__item {
+    margin-top: 50px; } }
+
 .products-list__pic {
   width: 100%; }
+
+@media (min-width: 760px) {
+  .products-list__pic {
+    float: left;
+    width: 50%;
+    margin-right: 3.68421%; } }
 
 .products-list__item-heading {
   margin: 25px 8.125% 14px 8.125%;
@@ -1660,11 +1670,19 @@ input[type="tel"] {
   line-height: 24px;
   font-weight: bold; }
 
+@media (min-width: 760px) {
+  .products-list__item-heading {
+    font-size: 18px; } }
+
 .products-list__item-description {
   display: block;
   margin: 0 8.125% 25px 8.125%;
   font-size: 1.4rem;
   font-weight: lighter; }
+
+@media (min-width: 760px) {
+  .products-list__item-description {
+    font-size: 15px; } }
 
 .products-list__item-price {
   display: block;
@@ -1674,11 +1692,21 @@ input[type="tel"] {
   font-weight: bold;
   border-top: solid #f1f1f1 1px; }
 
+@media (min-width: 760px) {
+  .products-list__item-price {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 33.75%; } }
+
 .products-list__cart-icon {
   position: absolute;
   width: 20px;
   bottom: 27px;
   right: 6.25%; }
+
+.catalog-content__products-list {
+  margin-top: 20px; }
 
 .manufacturing {
   position: relative;
@@ -1708,14 +1736,35 @@ input[type="tel"] {
   vertical-align: top;
   width: 40%; }
 
+@media (min-width: 760px) {
+  .manufacturing__heading h2 {
+    font-size: 18px;
+    margin-top: 10px; } }
+
+@media (min-width: 760px) {
+  .manufacturing__heading {
+    -ms-flex-order: 0;
+    order: 0;
+    padding: 25px 5.52632%; } }
+
 .manufacturing__description {
   font-size: 1.4rem;
   line-height: 24px;
   padding: 25px 8.125%; }
 
+@media (min-width: 760px) {
+  .manufacturing__description {
+    padding: 0 5.52632%;
+    font-size: 1.6rem; } }
+
 .manufacturing__order-btn {
   width: 83.75%;
   margin: 25px 8.125% 30px 8.125%; }
+
+@media (min-width: 760px) {
+  .manufacturing__order-btn {
+    width: 88.94737%;
+    margin: 25px 5.52632% 47px 5.52632%; } }
 
 .manufacturing__icon-video {
   display: inline-block;
@@ -1736,6 +1785,11 @@ input[type="tel"] {
 .catalog-content__manufacturing {
   margin-top: 30px;
   margin-bottom: 60px; }
+
+@media (min-width: 760px) {
+  .catalog-content__manufacturing {
+    margin-top: 50px;
+    margin-bottom: 65px; } }
 
 html {
   font-family: Verdana, Geneva, sans-serif;

@@ -20,16 +20,32 @@
             line-height: 24px;
             vertical-align: top;
             width: 40%;
+            @include tablet {
+              font-size: 18px;
+              margin-top: 10px;
+            };
         }
+        @include tablet {
+          order: 0;
+          padding: 25px 42px/$min-tablet-width * 100%;
+        };
     }
     &__description {
       font-size: $font-size-sm;
       line-height: 24px;
       padding: 25px 26px/$min-mobile-width * 100%;
+      @include tablet {
+        padding: 0 42px/$min-tablet-width * 100%;
+        font-size: $font-size;
+      };
     }
     &__order-btn {
       width: 100% - 2*26px/$min-mobile-width * 100%;
       margin: 25px 26px/$min-mobile-width * 100% 30px 26px/$min-mobile-width * 100%;
+      @include tablet {
+        width: 100% - 2 * 42px/$min-tablet-width * 100%;
+        margin: 25px 42px/$min-tablet-width * 100% 47px 42px/$min-tablet-width * 100%;
+      };
     }
     &__icon-video {
         display: inline-block;
@@ -50,4 +66,8 @@
 .catalog-content__manufacturing {
     margin-top: 30px;
     margin-bottom: 60px;
+    @include tablet {
+      margin-top: 50px;
+      margin-bottom: 65px;
+    };
 }
