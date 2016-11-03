@@ -14,7 +14,7 @@ var runSequence = require('run-sequence');
 // var cssnano = require('gulp-cssnano');
 // var imagemin = require('gulp-imagemin');
 // var cache = require('gulp-cache');
-// var del = require('del');
+var del = require('del');
 
 var config = {
     "mode": {
@@ -77,19 +77,18 @@ gulp.task('useref', function() {
     return gulp.src('app/*.html')
         .pipe($.useref())
         // Minifies only if it's a JavaScript file
-        .pipe($.gulpIf('*.js', $.uglify()))
+        .pipe($.if('*.js', $.uglify()))
         // Minifies only if it's a CSS file
-        .pipe($.gulpIf('*.css', $.cssnano()))
+        .pipe($.if('*.css', $.cssnano()))
         .pipe(gulp.dest('dist'))
 });
 
-
 gulp.task('images', function() {
-    return gulp.src('app/images/**/*.+(png|jpg|gif|svg)')
+    return gulp.src('app/img/**/*.+(png|jpg|gif|svg)')
         .pipe($.cache($.imagemin({
             interlaced: true
         })))
-        .pipe(gulp.dest('dist/images'))
+        .pipe(gulp.dest('dist/img'))
 });
 
 
@@ -100,7 +99,7 @@ gulp.task('fonts', function() {
 
 
 gulp.task('clean:dist', function() {
-    return $.del.sync('dist');
+    return del.sync('dist');
 });
 
 
@@ -110,7 +109,7 @@ gulp.task('cache:clear', function(callback) {
 
 
 gulp.task('build', function(callback) {
-    $.runSequence('clean:dist',
+    runSequence('clean:dist',
         'sass', 'useref', ['images', 'fonts'],
         callback
     )
@@ -133,7 +132,7 @@ gulp.task('sprites', function() {
             // for example if you want to generate scss instead of css
             //processor: 'sass', // make sure you have installed sprity-sass
         })
-        .pipe(gulpif('*.png', gulp.dest('./dist/img/'), gulp.dest('./dist/css/sprite')))
+        .pipe($.if('*.png', gulp.dest('./dist/img/'), gulp.dest('./dist/css/sprite')))
 });
 
 

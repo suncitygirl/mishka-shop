@@ -78,7 +78,7 @@
     <header class="main-header">
         <nav class="main-nav">
             <div class="main-nav__wrapper">
-                <a class="main-nav__logo" href="index.html">
+                <a class="main-nav__logo" href="/index.html">
                     <svg class="logo-mobile__icon">
                         <use xlink:href="#logo-mobile"></use>
                     </svg>
@@ -94,10 +94,10 @@
                 </a>
                 <ul class="main-nav__list--wide" hidden>
                     <li>
-                        <a class="main-nav__item--catalog" href="#">Каталог товаров</a>
+                        <a class="main-nav__item--catalog" href="catalog.html">Каталог товаров</a>
                     </li>
                     <li>
-                        <a class="main-nav__item--knitting" href="#">Вязание на заказ</a>
+                        <a class="main-nav__item--knitting" href="form.html">Вязание на заказ</a>
                     </li>
                     <li>
                         <a class="main-nav__item--new" href="#">Новые поступления</a>
@@ -132,14 +132,14 @@
 
             <ul class="main-nav__dropdown-list">
                 <li>
-                    <a class="main-nav__item" href="#">
+                    <a class="main-nav__item" href="catalog.html">
                         <div class="main-nav__wrapper">
                             <span class="main-nav__menu-text--catalog">Каталог товаров</span>
                         </div>
                     </a>
                 </li>
                 <li>
-                    <a class="main-nav__item" href="#">
+                    <a class="main-nav__item" href="form.html">
                         <div class="main-nav__wrapper">
                             <span class="main-nav__menu-text--knitting">Вязание на заказ</span>
                         </div>
@@ -177,6 +177,9 @@
             <div class="wrapper">
                 <h1 class="inner-header__heading">Каталог товаров</h1>
             </div>
+            <svg class="inner-delimiter">
+                <use xlink:href="#bg-zigzag-fill"></use>
+            </svg>
         </header>
         <div class="wrapper">
             <ul class="products-list catalog-content__products-list">
@@ -195,7 +198,7 @@
                               srcset="img/photo-1-mobile@2x.jpg 2x"
                               alt="Игрушка ручной работы" />
                     </picture>
-                    <h2 class="products-list__item-heading">Зайчик-попрыгайчик</h2>
+                    <h2 class="products-list__item-heading"><a href="#">Зайчик-попрыгайчик</a></h2>
                     <span class="products-list__item-description">Рост 30см, вес 200г</span>
                     <b class="products-list__item-price">1 200 руб.</b>
                     <div class="main-nav__icon products-list__cart-icon">
@@ -219,7 +222,7 @@
                             srcset="img/photo-2-mobile@2x.jpg 2x"
                             alt="Корзинка ручной работы" />
                     </picture>
-                    <h2 class="products-list__item-heading">Корзинка для белья</h2>
+                    <h2 class="products-list__item-heading"><a href="#">Корзинка для белья</a></h2>
                     <span class="products-list__item-description">Диаметр 15 см, высота 10 см</span>
                     <b class="products-list__item-price">690 руб.</b>
                     <div class="main-nav__icon products-list__cart-icon">
@@ -243,7 +246,7 @@
                             srcset="img/photo-3-mobile@2x.jpg 2x"
                             alt="Корзинка ручной работы" />
                     </picture>
-                    <h2 class="products-list__item-heading">Большая корзинка для игрушек</h2>
+                    <h2 class="products-list__item-heading"><a href="#">Большая корзинка для игрушек</a></h2>
                     <span class="products-list__item-description">Диаметр 30 см, высота 30 см</span>
                     <b class="products-list__item-price">1 500 руб.</b>
                     <div class="main-nav__icon products-list__cart-icon">
@@ -256,13 +259,13 @@
         </div>
         <div class="wrapper">
             <section class="manufacturing catalog-content__manufacturing">
-              <div class="manufacturing__video">
-                <div class="manufacturing__play-btn">
-                  <svg class="icon-play">
-                      <use xlink:href="#icon-play"></use>
-                  </svg>
-                </div>
-                <picture>
+                <div class="manufacturing__video">
+                    <button type='button' class="manufacturing__play-btn">
+                        <svg class="icon-play">
+                            <use xlink:href="#icon-play"></use>
+                        </svg>
+                    </button>
+                    <picture>
 
                   <source
                         media="(min-width: 760px)"
@@ -273,14 +276,14 @@
                         srcset="img/video-mobile@2x.jpg 2x"
                         alt="Иллюстрация к процессу производства">
                 </picture>
-              </div>
+                </div>
                 <div class="manufacturing__heading">
-                  <div class="manufacturing__icon-video">
-                    <svg class="icon-video">
-                        <use xlink:href="#icon-video"></use>
-                    </svg>
-                  </div>
-                  <h2>Процесс производства</h2>
+                    <div class="manufacturing__icon-video">
+                        <svg class="icon-video">
+                            <use xlink:href="#icon-video"></use>
+                        </svg>
+                    </div>
+                    <h2>Процесс производства</h2>
                 </div>
                 <p class="manufacturing__description">
                     Про просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.

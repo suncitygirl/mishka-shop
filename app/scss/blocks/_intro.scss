@@ -1,8 +1,9 @@
 .intro {
     position: relative;
     background: url("../img/hero-mobile@1x.jpg") no-repeat;
-    background-position: 0 -10px;
-    background-size: 100% auto;
+    background-position: 0 0;
+    background-size: 105% auto;
+    background-color: $light-gray;
     padding-top: 1px;
     @include retina2x {
         background: url("../img/hero-mobile@2x.jpg") top;
@@ -79,15 +80,33 @@
         font-size: 0;
         padding: 24px (30px/$min-mobile-width * 100%) 28px (30px/$min-mobile-width * 100%);
         color: $white;
+        transition: all 0.2s ease-in;
         @include tablet {
             padding-top: 26px;
             padding-bottom: 40px;
+            &:hover {
+                transition: all 0.2s ease-in;
+                transform: translateY(-7px);
+                box-shadow: 0 0 10px rgba(0,0,0,0.5);
+                border-radius: 4px;
+            }
+            &:active {
+                color: #88dfcc;
+            }
         };
         &--interior {
             background-color: $aquamarine;
+            transition: all 0.2s ease-in;
+            &:hover {
+                background-color: darken($aquamarine, 7%);
+            }
         }
         &--toys {
             background-color: $dark-aquamarine;
+            transition: all 0.2s ease-in;
+            &:hover {
+                background-color: darken($dark-aquamarine, 7%);
+            }
         }
     }
 }

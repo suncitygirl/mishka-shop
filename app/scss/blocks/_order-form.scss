@@ -46,6 +46,7 @@
     }
     &__tag {
         position: relative;
+        z-index: 0;
         width: 100%;
         margin-bottom: 35px;
         font-weight: bold;
@@ -84,9 +85,16 @@
         font-size: $font-size;
         line-height: 19px;
         font-weight: bold;
+        cursor: pointer;
         @include tablet {
             font-size: 18px;
         };
+        &:hover::before {
+          border: solid $aquamarine 2px;
+        }
+        &:active::before {
+          border: solid $gray 2px;
+        }
         &:last-child {
             margin-bottom: 5px;
             &::before {
@@ -107,18 +115,25 @@
             @include tablet {
                 top: -11px;
             };
+            &:hover {
+              border: none;
+            }
         }
     }
     &__checkbox-label {
         @include tablet {
             display: inline-block;
-            width: 50%;
+            width: 30%;
+            margin-right: 20%;
         };
         @include desktop {
-          width: 33%;
+          width: 15%;
+          margin-right: 18%;
+
         };
     }
     &__radio-label {
+      width: 50%;
         &::before {
             border-radius: 50%;
         }
@@ -219,10 +234,22 @@ input[type="text"] {
     margin-bottom: 24px;
     border-bottom: solid $black 2px;
     line-height: 19px;
+    &:hover {
+      border-bottom: solid $aquamarine 2px;
+    }
+    &:focus {
+      border-bottom: solid $aquamarine 2px;
+    }
 }
 textarea {
     border: solid $black 2px;
     resize: vertical;
+    &:hover {
+      border: solid $aquamarine 2px;
+    }
+    &:focus {
+      border: solid $aquamarine 2px;
+    }
 }
 input[type="email"],
 input[type="tel"] {
@@ -235,4 +262,9 @@ input[type="text"] {
     @include tablet {
         display: inline-block;
     };
+}
+
+input[type="tel"] {
+  position: relative;
+  z-index: 3;
 }

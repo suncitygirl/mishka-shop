@@ -71,13 +71,19 @@
         display: block;
     }
     &__arrow-icon {
-        padding: 12px 0;
-        border: solid $gray 1px;
+        padding: 23px 0 7px 0;
         & svg {
             width: 100%;
             height: 30px;
+            &:hover {
+              fill: $dark-gray;
+            }
+            &:active {
+              fill: $gray;
+            }
         }
         @include tablet {
+            padding: 12px 0;
             border: none;
         };
     }

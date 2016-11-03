@@ -16,6 +16,9 @@ app/styles/sprites
 
 .git
 .idea
+idea
 
 node_modules
 npm-debug.log
+
+dist

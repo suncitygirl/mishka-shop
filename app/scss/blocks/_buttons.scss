@@ -9,10 +9,19 @@
     color: $dark-gray;
     background: $white;
     border: solid $dark-gray 2px;
+    transition: all 0.4s ease-out;
+    outline: none;
     @include tablet {
         width: 50%;
     };
     @include desktop {
         width: 30%;
     };
+    &:hover {
+      background: $dark-gray;
+      color: $white;
+    }
+    &:active {
+      color: $gray;
+    }
 }

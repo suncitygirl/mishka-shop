@@ -1,4 +1,3 @@
-@import "logo";
 .main-nav {
     position: relative;
     width: 100%;
@@ -67,6 +66,12 @@
             height: 72px;
             margin: 6px 0 6px -75px;
         };
+        &:hover {
+          fill: $dark-gray;
+        }
+        &:active {
+          fill: $gray;
+        }
     }
     &__item {
         display: block;
@@ -164,6 +169,10 @@
             display: none;
         };
     }
+    &__menu-text--cart {
+      display: inline-block;
+      transform: translateY(-3px);
+    }
     &__open-icon {
         position: absolute;
         right: 0;
@@ -198,6 +207,12 @@
             transform: rotate(-45deg);
         }
     }
+    & a:hover {
+        color: #8d8d8d;
+    }
+    a:active {
+        color: $gray;
+    }
 }
 .logo {
     &-mobile__icon {
@@ -225,4 +240,12 @@
             display: none;
         }
     };
+}
+
+#logo-tablet__title {
+  fill: #fff;
+}
+
+#logo-desktop__title {
+  fill: #fff;
 }

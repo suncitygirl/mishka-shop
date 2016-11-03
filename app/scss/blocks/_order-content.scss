@@ -20,6 +20,7 @@
     }
 }
 .inner-header {
+  position: relative;
     text-align: center;
     background-color: $light-gray;
     &__heading {
@@ -33,4 +34,12 @@
             line-height: 50px;
         }
     }
+}
+
+.inner-delimiter {
+  position: absolute;
+  bottom: -70px;
+  left: 0;
+  width: 100%;
+  fill: $white;
 }
